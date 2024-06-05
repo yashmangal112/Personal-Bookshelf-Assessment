@@ -33,7 +33,7 @@ const BookSearchPage = ({ addToBookshelf, bookshelf }) => {
 
   return (
     <div className="container mx-auto p-4">
-    <p className='mx-auto font-semibold'>Search by Book name: </p>
+    <p className='mx-auto font-semibold mb-1'>Search by Book name: </p>
       <input 
         type="text"
         value={query}

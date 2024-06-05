@@ -1,7 +1,7 @@
 # Personal Bookshelf
 
 ## Description
-A React application allowing users to search for books using the Open Library API and maintain a personal bookshelf in the browser using localStorage.
+A React application allowing users to search for books using the Open Library API and maintain a personal bookshelf in the browser using localStorage.As a bonus, the application also displays the cover page of each book in the search results and the personal bookshelf.
 
 ## How to Set Up the Project Locally
 
@@ -19,7 +19,11 @@ A React application allowing users to search for books using the Open Library AP
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
+
+### Bonus Feature
+
+The application not only allows you to search and save books but also shows the cover page of each book in both the search results and the personal bookshelf.
 
 ### Deployment
 

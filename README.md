@@ -20,12 +20,12 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The application is deployed on Vercel. Visit the live application here: [https://personal-bookshelf-yash.vercel.app/](https://personal-bookshelf-yash.vercel.app/)
 
-### `npm run build` fails to minify
+1. Push final code to GitHub.
+2. Deploy the project on Vercel.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+By following these steps, you'll have a functional, styled, and responsive React application for managing a personal bookshelf using the Open Library API and localStorage.

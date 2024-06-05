@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import BookSearchPage from './pages/BookSearchPage';
+import BookshelfPage from './pages/BookshelfPage';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [bookshelf, setBookshelf] = useState([]);
+
+  useEffect(() => {
+    const savedBookshelf = JSON.parse(localStorage.getItem('bookshelf')) || [];
+    setBookshelf(savedBookshelf);
+  }, []);
+
+  const addToBookshelf = (book) => {
+    const newBookshelf = [...bookshelf, book];
+    setBookshelf(newBookshelf);
+    localStorage.setItem('bookshelf', JSON.stringify(newBookshelf));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <BookSearchPage addToBookshelf={addToBookshelf} bookshelf={bookshelf} />
+        </Route>
+        <Route path="/bookshelf">
+          <BookshelfPage bookshelf={bookshelf} />
+        </Route>
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
